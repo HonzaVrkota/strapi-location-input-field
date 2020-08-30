@@ -2,11 +2,11 @@ module.exports = ({ env }) => ({
   upload: {
     provider: "aws-s3",
     providerOptions: {
-      accessKeyId: "AKIAJLAVHAKDGU5HET2Q",
-      secretAccessKey: "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",
+      accessKeyId: env("AWS_ACCESS_KEY", ""),
+      secretAccessKey: env("AWS_SECRET_KEY", ""),
       region: "eu-central-1",
       params: {
-        Bucket: 'baryzive1',
+        Bucket: "baryzive1",
       },
     },
   },
