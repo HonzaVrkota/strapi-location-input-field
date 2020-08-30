@@ -1,0 +1,134 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Company"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "coverPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "openingHours": {
+      "type": "json"
+    },
+    "geoloc": {
+      "type": "json"
+    },
+    "companyMenu": {
+      "type": "json"
+    },
+    "ico": {
+      "type": "biginteger"
+    },
+    "dic": {
+      "type": "string"
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "coverPhotoChecked": {
+      "type": "boolean"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "formatted_address": {
+      "type": "string"
+    },
+    "place_id": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "g_maps_url": {
+      "type": "string"
+    },
+    "international_phone_number": {
+      "type": "string"
+    },
+    "address_components": {
+      "type": "json"
+    },
+    "opening_hours": {
+      "type": "json"
+    },
+    "objectID": {
+      "type": "uid"
+    },
+    "companyChecked": {
+      "type": "boolean",
+      "default": false
+    },
+    "companyReady": {
+      "type": "boolean",
+      "default": false
+    },
+    "company_ratings": {
+      "via": "company",
+      "collection": "company-rating"
+    },
+    "events": {
+      "collection": "event",
+      "via": "company"
+    },
+    "benefits": {
+      "type": "json"
+    },
+    "company_tags": {
+      "collection": "company-tags",
+      "via": "companies"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "long_description": {
+      "type": "text"
+    },
+    "views": {
+      "type": "biginteger"
+    },
+    "company_category": {
+      "model": "company-categories",
+      "via": "companies"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "averageRating": {
+      "type": "decimal",
+      "max": 5,
+      "min": 0
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/company-ratings",
+      "handler": "company-rating.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company-ratings/count",
+      "handler": "company-rating.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/company-ratings/:id",
+      "handler": "company-rating.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/company-ratings",
+      "handler": "company-rating.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/company-ratings/:id",
+      "handler": "company-rating.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/company-ratings/:id",
+      "handler": "company-rating.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_ratings",
+  "info": {
+    "name": "CompanyRating"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "rating": {
+      "type": "float",
+      "max": 5,
+      "min": 0
+    },
+    "rating_description": {
+      "type": "text"
+    },
+    "company": {
+      "model": "company",
+      "via": "company_ratings"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "company_ratings"
+    }
+  }
+}

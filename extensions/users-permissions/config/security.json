@@ -1,0 +1,14 @@
+{
+    "jwt": {
+        "expiresIn": "7d"
+    },
+    "jwtCustom": {
+        "expiresIn": "15m"
+    },
+    "jwtRefresh": {        
+        "expiresIn": "7d"
+    },
+    "jwtMailConfirm": {        
+        "expiresIn": "7d"
+    }
+}
