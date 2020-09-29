@@ -75,8 +75,9 @@
       "type": "string"
     },
     "company_ratings": {
-      "via": "user",
-      "collection": "company-rating"
+      "unique": true,
+      "collection": "company-rating",
+      "via": "user"
     }
   }
 }

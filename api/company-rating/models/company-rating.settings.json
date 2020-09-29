@@ -22,9 +22,9 @@
       "via": "company_ratings"
     },
     "user": {
+      "via": "company_ratings",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "company_ratings"
+      "model": "user"
     }
   }
 }

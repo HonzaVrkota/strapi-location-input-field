@@ -113,3 +113,5 @@ exports
 build
 package-lock.json
 yarn.lock
+
+gpad_start.bat
