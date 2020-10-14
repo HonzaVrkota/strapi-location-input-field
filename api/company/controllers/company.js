@@ -15,8 +15,8 @@ module.exports = {
       .find({ companyReady: true, companyChecked: true });
     if (entities[0]) {
       const client = algoliasearch(
-        "89KJ03GDQ8",
-        "55a474ecb5746dacfe93b14d29b2e893"
+        process.env.ALGOLIA_APP_ID,
+        process.env.ALGOLIA_ADMIN_API_KEY
       );
       let algoliaEntities = [];
       entities.forEach((entity) => {
@@ -31,8 +31,7 @@ module.exports = {
       //console.log(test);
       await index
         .saveObjects(algoliaEntities)
-        .then(({ objectIDs }) => {
-        })
+        .then(({ objectIDs }) => {})
         .catch((errAlgo) => {
           console.log(errAlgo);
           return ctx.response.badRequest("Algolia API error");
