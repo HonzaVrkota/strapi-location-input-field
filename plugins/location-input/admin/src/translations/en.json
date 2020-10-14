@@ -1,0 +1,5 @@
+{
+  "notification.error.message": "An error occurred",
+  "names.location.field": "Company address",
+  "google.place.notification.error": "Error on load Google Maps API"
+}

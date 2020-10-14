@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guests",
+  "info": {
+    "name": "Guests"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name_of_guest": {
+      "type": "string"
+    },
+    "location": {
+      "type": "location"
+    },
+    "address": {
+      "type": "json"
+    }
+  }
+}
