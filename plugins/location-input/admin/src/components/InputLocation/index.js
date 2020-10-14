@@ -41,7 +41,7 @@ const InputLocation = (props) => {
      * ! Api key from MapBox should be in .env
      */
     mapboxApiAccessToken:
-      "pk.eyJ1IjoiaG9uemF2cmtvdGEiLCJhIjoiY2tnODFtNGtxMDA4dDJxbXJpMm0xcGR6byJ9.DQK3fcNQhd-ilGIxuSeUwQ",
+      "apiKey",
   });
 
   /**
@@ -162,7 +162,7 @@ const InputLocation = (props) => {
       </Text>
       <div className="location-autocomplete">
         <GooglePlacesAutocomplete
-          apiKey="AIzaSyBZOPlD44Jnn_NOnbUh2XlSo6D3KzSjPg0"
+          apiKey="apiKey"
           selectProps={{
             addressAutocomplete,
             onChange: setAddressAutocomplete,
